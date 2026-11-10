@@ -1,0 +1,21 @@
+{
+  "created_date": "2026-11-10",
+  "purpose": "Verify original research sources remain unchanged; read-only provenance, not copied research data",
+  "sources": [
+    {
+      "path": "/Users/ajbk/Documents/Codex/2026-10-26/task/proposal-v3/Clean_Energy_PhD_Proposal_19_Buildings_v3_TH.md",
+      "sha256": "a769cca83cf7684c24879bf60de394e7c7ac11a4bb8812985ae4022824b736c9",
+      "bytes": 116423
+    },
+    {
+      "path": "/Users/ajbk/Documents/Codex/2026-10-26/task/paper-simulation-2026-10-29/KKU_PV_Paper_Working_Draft_TH_2026-10-29.md",
+      "sha256": "7e3467dba4e81e7658913230108c5e0a35af55db42f6974cd6881b0cfade5a9e",
+      "bytes": 91976
+    },
+    {
+      "path": "/Users/ajbk/Library/Mobile Documents/com~apple~CloudDocs/ป.เอก/06-แผนวิทยานิพนธ์-พลังงานสะอาด/PoC_Developer_Handoff/01_PV_BESS_Investment_Analysis_PoC_EN.md",
+      "sha256": "b1a7b30aaefa9d2757390123c4c5f6a5906007fac6e0db83e36f62dc52233fad",
+      "bytes": 29454
+    }
+  ]
+}
