@@ -1,11 +1,32 @@
 # KKU Integrated Energy Research
 
-พื้นที่วิจัยแนวใหม่สำหรับ 19 อาคารคณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น
+ร่างแนววิจัยใหม่สำหรับ 19 อาคารคณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น แยกจากงานวิจัยเดิม
 
-แยกจาก Proposal v3 เดิม เพื่อศึกษาการเลือกเทคโนโลยีและการใช้ประโยชน์พลังงานร่วมกันระหว่าง PV, BESS, smart EV charging, flexible load และการส่งออกไฟฟ้าเฉพาะกรณีที่มีสิทธิ์ ภายใต้เป้าหมายเศรษฐศาสตร์และคาร์บอนที่กำหนดขอบเขตชัดเจน
+## เริ่มอ่าน
 
-โฟลเดอร์งานวิจัยเดิมไม่ได้เป็น Git repository จึงสร้าง repository นี้เป็นฐานแยกสำหรับ managed worktree โดยไม่ initialize Git หรือแก้เอกสารในงานเดิม ไม่มี remote และไม่มีการเผยแพร่
+1. [ข้อเสนอหลักภาษาไทยพร้อมชื่อและ Abstract ภาษาอังกฤษ](docs/01_proposal_TH.md)
+2. [เปรียบเทียบกับแนวเดิม](docs/02_scope_comparison.md)
+3. [แผนทดลองและตัวชี้วัด](docs/03_experiments_and_metrics.md)
+4. [ข้อมูลและระดับการกล่าวอ้าง](docs/04_data_and_claim_gates.md)
+5. [ที่มาและคำถามเปิด](docs/05_sources_and_open_questions.md)
+6. [ผลตรวจความแยกจากต้นฉบับ](VERIFICATION.md)
 
-ร่างแนววิจัยใหม่จะอยู่ใน worktree แยก ชื่อ branch `research/integrated-energy-19-buildings` งานเดิมยังคงสถานะเดิม ไม่ได้ถูกแทนที่ด้วยแนวใหม่
+แนวใหม่พิจารณา PV, BESS, smart EV charging, flexible load, efficiency และ export ตามสิทธิ์ เพื่อเศรษฐศาสตร์และเส้นทางลดคาร์บอน เลือกไม่ลงทุนหรือไม่ติดตั้งบางระบบได้
 
-เอกสารทั้งหมดเป็นข้อเสนอสำหรับหารือ ไม่ใช่ผลทดลองหรือการรับรองหัวข้อจากอาจารย์
+## สถานะ
+
+เป็นข้อเสนอสำหรับหารือ ไม่ใช่ผลทดลอง ไม่ใช่หัวข้อที่อาจารย์อนุมัติ ไม่รับรองสิทธิ์ export และไม่อ้างว่าบรรลุ Net Zero แล้ว รอบนี้ไม่มี simulation, code implementation, push หรือ deployment
+
+## การแยกงาน
+
+โฟลเดอร์วิจัยเดิมไม่ได้เป็น Git repository จึงสร้าง repo ใหม่เฉพาะแนวนี้ แล้วแยก linked Git worktree จริง ไม่ได้แยกจาก repo เว็บ portfolio หรือ tracker และไม่ได้ initialize Git ในโฟลเดอร์วิจัยเดิม
+
+- Base repository: `/Users/ajbk/Documents/ChatGPT/PhD/kku-integrated-energy-research`
+- Worktree: `/Users/ajbk/Documents/ChatGPT/PhD/kku-integrated-energy-research/.worktrees/integrated-energy-net-zero`
+- Branch: `research/integrated-energy-19-buildings`
+- Base branch: `main`
+- ไม่มี remote, push หรือการเผยแพร่
+
+ใช้ `git worktree list` จาก base repository เพื่อตรวจ ใช้งานต่อใน worktree เท่านั้น main เก็บเพียงฐาน/manifest ไม่มีร่างแนวใหม่ปนอยู่ใน main แหล่งงานเดิมและ hashes อยู่ใน [source_manifest.json](source_manifest.json)
+
+วันที่จัดทำ 10 พฤศจิกายน 2026
