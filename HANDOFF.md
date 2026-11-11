@@ -75,6 +75,20 @@ For a future release, run checks, commit, push this branch, then deploy the exac
 
 Do not create a replacement Site or overwrite the old thesis/portfolio deployments. No custom domain, paid service, analytics or additional persistent credential is needed for this release.
 
+## Initial published release
+
+Production URL: https://kku-integrated-energy-research.vercel.app/
+
+Initial published commit: `3ee136a68e62a64e0f4c9b3fe5b4ebb08468d013`
+
+Initial Vercel deployment: `dpl_2K6Jb1HUpibE2WL75Uwc9ihbCdsb`, READY, Git source, production.
+
+The first push on `research/integrated-energy-19-buildings` became the repository default branch and triggered a successful production Git deployment. GitHub reported the Vercel status as success for that exact commit. Keep checking the current production-branch setting before future publication; the earlier generic caution about non-default branches still applies.
+
+An authenticated HTTP fetch returned 200 with all 31 slides. The served HTML SHA-256 matched the canonical file exactly. `X-Robots-Tag: noindex, nofollow`, `X-Content-Type-Options: nosniff` and the referrer-policy header were present. Access remains protected by Vercel Authentication. Use the regular production URL while signed in to the authorized Vercel account; no public bearer link is provided.
+
+Local browser QA is complete. Full remote-browser interaction and authenticated negative-route checks were not completed; the verified deployed-byte match and authenticated main-page response should not be described as those tests.
+
 ## Verification limits and next work
 
 - No numerical model, optimization or field validation was run for this release.

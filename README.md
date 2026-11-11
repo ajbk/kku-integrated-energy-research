@@ -37,3 +37,5 @@
 [เอกสารส่งต่องาน](HANDOFF.md) ระบุวิธีแก้ไข ทดสอบ และ deploy หน้าเว็บ 31 สไลด์ที่ `public/index.html` เผยแพร่เฉพาะ `public/` ไม่รวมเอกสารวิจัยหรือ manifest ในเว็บไซต์
 
 ตรวจด้วย `npm test` และ `npm run test:browser` ตามคำแนะนำใน handoff ไม่มี backend หรือการติดตั้งระบบพลังงานจริง
+
+เว็บ production ที่ตรวจแล้ว: https://kku-integrated-energy-research.vercel.app/ โดยใช้บัญชี Vercel ที่มีสิทธิ์เข้าดู หน้าเว็บยังเปิด Authentication อยู่

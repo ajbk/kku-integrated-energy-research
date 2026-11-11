@@ -21,3 +21,12 @@ The exact transferred HTML bytes are preserved. The existing cloud deck reposito
 No Safari/Firefox/physical-device test, fullscreen confirmation or physical-print/PDF-export test was performed. External literature links were not re-reviewed for this publication operation. No numerical research model or field result was validated.
 
 Deployment readiness and HTTP checks must be verified against the release commit separately. The handoff identifies the repository and Vercel project; a successful local test is not a deployment success claim.
+
+## Initial production verification
+
+- Commit: `3ee136a68e62a64e0f4c9b3fe5b4ebb08468d013` verified on the GitHub branch by ls-remote.
+- Vercel deployment `dpl_2K6Jb1HUpibE2WL75Uwc9ihbCdsb`: READY, production, exact Git commit matched.
+- GitHub Vercel status: success.
+- Authenticated production HTTP fetch: 200, 31 slides, exact canonical HTML SHA-256 match.
+- Protected access retained; no public bearer link is included in deliverables.
+- Full deployed-browser interactions and authenticated non-public-route tests were not completed.
