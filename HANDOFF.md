@@ -69,7 +69,7 @@ Project: `kku-integrated-energy-research` (`prj_PxYssL3tXLgXdmflo7OwUesAQBdK`)
 
 Framework: Other/static. Output directory: `public`. Build and install commands: empty. Node setting: 24.x. No environment variables or secrets are required. Only the deck and robots.txt are published; research documents, source hashes, local paths and this handoff are not site routes.
 
-The project was created with Vercel Authentication enabled for `all_except_custom_domains`. Preserve that protection unless the owner explicitly changes the intended audience. A private GitHub repository does not itself protect a website. `noindex`/robots.txt request search-engine exclusion, not access control.
+The project currently uses Vercel Authentication for `all`. The initial default `all_except_custom_domains` allowed the production alias to respond without a login; protection was tightened to cover production as well. An anonymous request then redirected to Vercel SSO. Preserve this access protection unless the owner explicitly changes the intended audience. A private GitHub repository does not itself protect a website. `noindex`/robots.txt request search-engine exclusion, not access control.
 
 For a future release, run checks, commit, push this branch, then deploy the exact reviewed commit to this existing Vercel project. Verify the resulting deployment status and URL. Do not assume pushing a non-default branch promotes production automatically. Check the Git connection and production branch settings first; an explicit Git-based deployment is acceptable.
 
@@ -85,7 +85,7 @@ Initial Vercel deployment: `dpl_2K6Jb1HUpibE2WL75Uwc9ihbCdsb`, READY, Git source
 
 The first push on `research/integrated-energy-19-buildings` became the repository default branch and triggered a successful production Git deployment. GitHub reported the Vercel status as success for that exact commit. Keep checking the current production-branch setting before future publication; the earlier generic caution about non-default branches still applies.
 
-An authenticated HTTP fetch returned 200 with all 31 slides. The served HTML SHA-256 matched the canonical file exactly. `X-Robots-Tag: noindex, nofollow`, `X-Content-Type-Options: nosniff` and the referrer-policy header were present. Access remains protected by Vercel Authentication. Use the regular production URL while signed in to the authorized Vercel account; no public bearer link is provided.
+An authenticated HTTP fetch returned 200 with all 31 slides. The served HTML SHA-256 matched the canonical file exactly. `X-Robots-Tag: noindex, nofollow`, `X-Content-Type-Options: nosniff` and the referrer-policy header were present. After the initial fetch, anonymous production access was checked and protection was tightened to `all`; the production alias and immutable deployment now require Vercel Authentication. Use the regular production URL while signed in to the authorized Vercel account; no public bearer link is provided.
 
 Local browser QA is complete. Full remote-browser interaction and authenticated negative-route checks were not completed; the verified deployed-byte match and authenticated main-page response should not be described as those tests.
 

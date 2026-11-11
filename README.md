@@ -26,7 +26,7 @@
 - Branch: `research/integrated-energy-19-buildings`
 - Base branch: `main`
 - GitHub repository แบบ private: https://github.com/ajbk/kku-integrated-energy-research
-- Vercel project: kku-integrated-energy-research โดยคง Vercel Authentication ตามค่าเริ่มต้น
+- Vercel project: kku-integrated-energy-research โดยเปิด Vercel Authentication ครอบคลุมทุก deployment รวม production
 
 ใช้ `git worktree list` จาก base repository เพื่อตรวจ ใช้งานต่อใน worktree เท่านั้น main เก็บเพียงฐาน/manifest ไม่มีร่างแนวใหม่ปนอยู่ใน main แหล่งงานเดิมและ hashes อยู่ใน [source_manifest.json](source_manifest.json)
 

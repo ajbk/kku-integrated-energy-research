@@ -30,3 +30,7 @@ Deployment readiness and HTTP checks must be verified against the release commit
 - Authenticated production HTTP fetch: 200, 31 slides, exact canonical HTML SHA-256 match.
 - Protected access retained; no public bearer link is included in deliverables.
 - Full deployed-browser interactions and authenticated non-public-route tests were not completed.
+
+## Access-policy verification
+
+The initial `all_except_custom_domains` setting did not protect the production alias: a credential-free HEAD request returned 200. The project setting was changed to `ssoProtection.deploymentType=all`. A fresh anonymous request to the production alias returned 302 to Vercel SSO. This is the access policy in effect for handoff; no claim is made that the initial defaults protected the alias.
