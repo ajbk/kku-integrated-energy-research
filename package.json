@@ -1,0 +1,14 @@
+{
+  "name": "kku-integrated-energy-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Research proposal and static 31-slide EGAT-KKU presentation",
+  "type": "module",
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "test": "node --test tests/release.test.mjs",
+    "check": "node --test tests/release.test.mjs",
+    "test:browser": "node scripts/check-browser.mjs"
+  },
+  "devDependencies": {"playwright": "1.64.1"}
+}

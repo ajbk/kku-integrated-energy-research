@@ -1,0 +1,14 @@
+.git
+.worktrees
+artifacts
+node_modules
+docs
+tests
+scripts
+presentation-source
+README.md
+HANDOFF.md
+VERIFICATION.md
+AGENTS.md
+source_manifest.json
+RELEASE_CHECKS.md

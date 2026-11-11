@@ -15,7 +15,7 @@
 
 ## สถานะ
 
-เป็นข้อเสนอสำหรับหารือ ไม่ใช่ผลทดลอง ไม่ใช่หัวข้อที่อาจารย์อนุมัติ ไม่รับรองสิทธิ์ export และไม่อ้างว่าบรรลุ Net Zero แล้ว รอบนี้ไม่มี simulation, code implementation, push หรือ deployment
+เป็นข้อเสนอสำหรับหารือ ไม่ใช่ผลทดลอง ไม่ใช่หัวข้อที่อาจารย์อนุมัติ ไม่รับรองสิทธิ์ export และไม่อ้างว่าบรรลุ Net Zero แล้ว ร่างวิจัยเดิมยังไม่มี simulation หรือผลทดลอง ส่วนการเผยแพร่หน้าเว็บเพิ่มเติมวันที่ 11 พฤศจิกายน 2026 อธิบายใน HANDOFF.md
 
 ## การแยกงาน
 
@@ -25,8 +25,15 @@
 - Worktree: `/Users/ajbk/Documents/ChatGPT/PhD/kku-integrated-energy-research/.worktrees/integrated-energy-net-zero`
 - Branch: `research/integrated-energy-19-buildings`
 - Base branch: `main`
-- ไม่มี remote, push หรือการเผยแพร่
+- GitHub repository แบบ private: https://github.com/ajbk/kku-integrated-energy-research
+- Vercel project: kku-integrated-energy-research โดยคง Vercel Authentication ตามค่าเริ่มต้น
 
 ใช้ `git worktree list` จาก base repository เพื่อตรวจ ใช้งานต่อใน worktree เท่านั้น main เก็บเพียงฐาน/manifest ไม่มีร่างแนวใหม่ปนอยู่ใน main แหล่งงานเดิมและ hashes อยู่ใน [source_manifest.json](source_manifest.json)
 
 วันที่จัดทำ 10 พฤศจิกายน 2026
+
+## Website release and developer handoff
+
+[เอกสารส่งต่องาน](HANDOFF.md) ระบุวิธีแก้ไข ทดสอบ และ deploy หน้าเว็บ 31 สไลด์ที่ `public/index.html` เผยแพร่เฉพาะ `public/` ไม่รวมเอกสารวิจัยหรือ manifest ในเว็บไซต์
+
+ตรวจด้วย `npm test` และ `npm run test:browser` ตามคำแนะนำใน handoff ไม่มี backend หรือการติดตั้งระบบพลังงานจริง

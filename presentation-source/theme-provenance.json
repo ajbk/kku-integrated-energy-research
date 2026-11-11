@@ -1,0 +1,10 @@
+{
+  "template": "Retained EGAT–KKU Research Template v4",
+  "reference_inspected": "Original reference.pptx: 16 samples and 16 named layouts",
+  "egat_original_source": "https://www.egat.co.th/home/wp-content/uploads/2025/02/LOGO-EGAT-ENG.zip",
+  "egat_sha256": "3b448e6cf4936a4456fdda857adc541855e61086b7a4b8a19d4ee7140b5edd89",
+  "kku_color": "#A73B24",
+  "egat_blue": "#154295",
+  "egat_yellow": "#FFCC00",
+  "font": "Embedded Kanit Regular and Bold, retained SIL OFL"
+}

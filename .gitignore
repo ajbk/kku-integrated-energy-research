@@ -2,3 +2,10 @@
 artifacts/
 
 .worktrees/
+
+node_modules/
+.vercel/
+.env
+.env.*
+playwright-report/
+test-results/
