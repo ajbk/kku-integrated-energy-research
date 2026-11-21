@@ -2,6 +2,10 @@
 
 อัปเดต 21 พฤศจิกายน 2569 (2026) · เอกสารสำหรับคนหรือ AI ที่มารับช่วงงานทั้งโปรเจกต์ ไม่ใช่ handoff เฉพาะสไลด์
 
+## Revised English working proposal on this branch
+
+[Policy-Aware Sizing of Campus Photovoltaics and Battery Storage with Smart EV Charging](./docs/06_policy_aware_sizing_proposal_revised_EN.md) is the post-review working proposal for advisor discussion. It defines the revised question, comparators and validation protocol: choose capacities for an implementable controller, then test whether perfect foresight changes the decision. Begin there for the revised scope; the original proposal, research design below and EN049992-2 slides are retained for context. The new scope is not approved and does not claim KKU results, access or permission to operate chargers. This documentation branch does not change the release branch or the published deck.
+
 ## เริ่มตรงนี้
 
 Research direction: **Integrated Energy Portfolio Planning under Uncertainty** สำหรับ 19 อาคารคณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น คำถามคือควรลงทุนอะไร ขนาดเท่าใด ที่จุดใด และเมื่อใด ภายใต้ข้อจำกัดระบบไฟฟ้า บริการ และความไม่แน่นอน นี่เป็นแนวทางวิจัยแยกจาก Proposal v3, PV paper, PV/BESS PoC, thesis tracker และ portfolio เดิม ไม่ได้แทนที่หรือเปลี่ยนสถานะของงานเหล่านั้น
