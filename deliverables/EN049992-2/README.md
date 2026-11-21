@@ -7,4 +7,6 @@ Integrated Energy Portfolio Planning under Uncertainty: research proposal for 19
 
 Each editable PowerPoint has three slides, speaker notes in the corresponding language, the KKU seal, and a labelled concept illustration. These are seminar snapshots dated 21 November 2026, not experimental results or approved investment recommendations. The original [31-slide research proposal](https://kku-integrated-energy-research.vercel.app/) remains separate.
 
+- [Handoff: ขอบเขต ข้อจำกัด และงานถัดไป](HANDOFF.md)
+
 Embedded Kanit fonts are covered by the [SIL Open Font License](OFL-Kanit.txt).
