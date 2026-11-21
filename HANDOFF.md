@@ -1,98 +1,76 @@
-# Handoff for the KKU integrated energy research project
+# KKU Integrated Energy Research | Project handoff
 
-Updated 11 November 2026
+อัปเดต 21 พฤศจิกายน 2569 (2026) · เอกสารสำหรับคนหรือ AI ที่มารับช่วงงานทั้งโปรเจกต์ ไม่ใช่ handoff เฉพาะสไลด์
 
-## What this project contains
+## เริ่มตรงนี้
 
-This is the independent research direction requested for 19 KKU Engineering buildings. It is separate from the original Proposal v3, PV paper, thesis tracker and portfolio website.
+Research direction: **Integrated Energy Portfolio Planning under Uncertainty** สำหรับ 19 อาคารคณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น คำถามคือควรลงทุนอะไร ขนาดเท่าใด ที่จุดใด และเมื่อใด ภายใต้ข้อจำกัดระบบไฟฟ้า บริการ และความไม่แน่นอน นี่เป็นแนวทางวิจัยแยกจาก Proposal v3, PV paper, PV/BESS PoC, thesis tracker และ portfolio เดิม ไม่ได้แทนที่หรือเปลี่ยนสถานะของงานเหล่านั้น
 
-- `docs/01_proposal_TH.md`: full Thai proposal with English title and abstract.
-- `docs/02_scope_comparison.md`: differences from the previous research direction.
-- `docs/03_experiments_and_metrics.md`: comparison design, uncertainty and evaluation metrics.
-- `docs/04_data_and_claim_gates.md`: required data and limits on claims.
-- `docs/05_sources_and_open_questions.md`: provenance and unresolved questions.
-- `public/index.html`: the canonical self-contained 31-slide presentation, including 5 reference slides. This is the later presentation revision, with more literature and policy context than the earlier Markdown proposal.
-- `presentation-source/release-source.json`: exact source hash and transfer provenance for the delivered HTML.
-- `presentation-source/theme-provenance.json`: original brand-asset provenance.
+**สถานะ:** มีข้อเสนอ แผนทดลอง และสื่อสำหรับหารือ ยังไม่มี simulation engine, backend, การควบคุมอุปกรณ์จริง ผลทดลองจากข้อมูล มข. หรือข้อยืนยันว่าอาจารย์อนุมัติหัวข้อ ผลประโยชน์ หรือนโยบาย Net Zero ตัวเลขสมมติสำหรับทดลองวิธีต้องติดป้าย synthetic ชัดเจน ไม่ใช่ผลของทั้ง 19 อาคาร
 
-There is no simulation engine, backend, user database, live equipment control, measured KKU result or approved Net Zero claim. The presentation remains a proposed research framework.
+- **Repo ส่วนตัว:** `ajbk/kku-integrated-energy-research` · **branch สำหรับรับช่วงพร้อมไฟล์สัมมนา:** `seminar/en049992-2-2026-11-21`
+- **Default/release branch:** `research/integrated-energy-19-buildings` คนละหน้าที่กับ branch ส่งต่องานนี้ หากได้รับโจทย์ใหม่ ให้แยก working branch จากฐานที่ตรงงาน อย่าแก้หรือ merge เข้า release branch โดยอัตโนมัติ
+- ใช้ checkout ที่ได้รับอนุญาตและอ่าน [AGENTS.md](AGENTS.md) ก่อนเริ่ม ไม่ต้องใช้พาธบน Mac ของผู้วิจัยเมื่อต่อจากเครื่องอื่น ไม่แตะต้นฉบับใน worktree อื่น โฟลเดอร์เดิม หรือ iCloud
+- ข้อความสำหรับเริ่มกับ AI ตัวอื่นอยู่ท้ายไฟล์ สิทธิ์อ่าน repo ไม่ได้ให้อำนาจแชร์ข้อมูล เปลี่ยนสิทธิ์ เปิด PR หรือ deploy
 
-## Repository and branch
+## แผนที่ไฟล์
 
-Private repository: https://github.com/ajbk/kku-integrated-energy-research
+| เมื่อจะทำเรื่องนี้ | อ่านหรือแก้ไฟล์นี้ |
+| --- | --- |
+| ขอบเขต คำถามวิจัย วัตถุประสงค์ ชื่อ/abstract | [ข้อเสนอหลักภาษาไทย](docs/01_proposal_TH.md) |
+| เทียบแนวทางนี้กับ Proposal v3 และ PV/BESS เดิม | [เปรียบเทียบขอบเขต](docs/02_scope_comparison.md) |
+| ออกแบบ comparator, scenarios, holdout และ KPI | [แผนทดลองและตัวชี้วัด](docs/03_experiments_and_metrics.md) |
+| ขอข้อมูล ประเมินความพร้อม และควบคุมข้อสรุป | [ข้อมูลและเงื่อนไขการสรุปผล](docs/04_data_and_claim_gates.md) |
+| ตรวจ novelty, เอกสารอ้างอิง และกติกาที่ยังไม่ยืนยัน | [แหล่งข้อมูลและคำถามเปิด](docs/05_sources_and_open_questions.md) |
+| แก้สไลด์วิจัยฉบับเว็บ (31 สไลด์ รวม 5 สไลด์อ้างอิง) | [ไฟล์ HTML ต้นฉบับ](public/index.html), [hash และที่มา](presentation-source/release-source.json), [ที่มาสินทรัพย์ภาพ](presentation-source/theme-provenance.json) |
+| เตรียมนำเสนอ EN049992-2 | [Handoff สัมมนา](deliverables/EN049992-2/HANDOFF.md): PowerPoint ไทย/อังกฤษ แยกไฟล์ ฉบับละ 3 สไลด์ พร้อมโน้ตและตรา มข. ไม่ใช้โลโก้ กฟผ. ในชุดนี้ ยังไม่ได้ส่งงานหรือยืนยันกำหนดส่ง |
+| ตรวจที่มาของเอกสารเดิมและประวัติการเผยแพร่ | [Source manifest](source_manifest.json), [บันทึกช่วงเริ่มโครงการ](VERIFICATION.md), [บันทึกตรวจ release](RELEASE_CHECKS.md) |
 
-Release branch: `research/integrated-energy-19-buildings`
+ข้อเสนอ Markdown, เว็บ 31 สไลด์ และสไลด์สัมมนาเป็นคนละชุด เว็บมีบริบทบรรณานุกรมที่ปรับเพิ่มภายหลัง ส่วนสไลด์สัมมนาย่อวิธีเพื่อการนำเสนอ ใช้ protocol ใน `docs/03_experiments_and_metrics.md` เป็นแหล่งหลักสำหรับชื่อการทดลองและเงื่อนไข ไม่คัดตัวอักษร A/B/C จากสไลด์สั้นไปตั้งชื่อผลทดลองตรง ๆ
 
-Mac worktree: `/Users/ajbk/Documents/ChatGPT/PhD/kku-integrated-energy-research/.worktrees/integrated-energy-net-zero`
+## หลักที่ต้องรักษาหากทำวิจัยต่อ
 
-The repository was created separately because the original research folder was not a Git repository. Keep work on this branch/worktree; do not overwrite the original proposal, website or tracker. Initial proposal commit: `3cd729ca88dc924eb18c1d20dd0a8870e7d90cb6`.
+1. **ขอบเขต 19 อาคาร ไม่ใช่ 19 มิเตอร์ที่ยืนยันแล้ว** แยกอาคารออกจากจุดคิดค่าไฟและมิเตอร์ย่อย หากหลายอาคารแชร์จุดคิดค่าไฟ ให้ตรวจบิลที่จุดนั้นก่อนจัดสรรรายอาคาร ห้ามหักกลบค่าไฟหรือสมมติส่งพลังงานข้ามมิเตอร์โดยไม่มีหลักฐาน จุดวัดเดียวใช้เริ่มทดสอบ workflow ได้ แต่ไม่ใช่เงื่อนไขบังคับและไม่ใช่ขอบเขตสุดท้าย
+2. **ตัดสินใจลงทุนแยกจากการเดินระบบ** มีฐานระบบเดิม/ไม่ลงทุนและ PV-only เทียบกับ BESS, การจัดเวลาชาร์จ EV แบบทางเดียว และโหลดที่เลื่อนได้ตามสิทธิ์ ขนาดศูนย์เป็นคำตอบที่ยอมรับได้ ไม่ตั้งสมมติฐานว่าทุกอาคารต้องติดทุกระบบ
+3. **เปรียบเทียบอย่างเป็นธรรม** ใช้ขอบเขต ระบบเดิม ระดับบริการ และข้อมูลที่วิธีแต่ละแบบรู้ได้เท่ากัน แยกคุณค่าจากการประสานการเดินระบบ (Dsep/D1) การเลือกขนาดร่วมเทียบแยก (Psep/P0) และการวางแผนรับความไม่แน่นอน (P0/P1) กันข้อมูลหรือสถานการณ์ไว้ทดสอบโดยไม่รั่วเป็นข้อมูลฝึก และแยกกรณีรู้อนาคตออกเป็นเพียงขอบบน ถ้ามี EV ให้เทียบฐานชาร์จจากกริดที่ให้บริการระดับเดียวกัน และตรวจทั้งการครองช่องชาร์จกับกำลังไฟรวม
+4. **ตรวจบิลก่อนอ้างผลประหยัด** ยืนยัน meter topology, รอบบิล, อัตราและช่วงคิด demand จากบัญชีจริง ตรวจพลังงาน กำลังไฟสูงสุด ต้นทุน/NPV ความเสี่ยง ผลต่อความสบายและบริการ EV บันทึกสมมติฐานและหน่วยให้ทำซ้ำได้ ข้อมูลขาดเป็น unknown ไม่ใช่ศูนย์
+5. **สิทธิ์ก่อนนับผล** ค่าเริ่มต้นคือไม่ส่งออกจนมีหลักฐานแยกทั้งสิทธิ์ส่งและสิทธิ์รับเงิน ไม่เดาอัตราค่าไฟหรือรายได้ EV แยก Scope 2 ออกจาก avoided emissions และไม่อ้าง Net Zero หรือหักการส่งออกออกจาก Scope 2 โดยอัตโนมัติ
 
-## Presentation source and editing
+## งานถัดไปตามลำดับข้อมูล
 
-Edit `public/index.html` directly. It contains the HTML, CSS, JavaScript, fonts and logo assets needed for offline use. Original logos and the embedded Kanit OFL license must be preserved. The older cloud Python generators were not adopted as a build pipeline because the final delivered HTML contains later changes. Running an older generator would overwrite those changes.
+| ลำดับ | ผลงานที่ควรได้ | เงื่อนไขก่อนขยับต่อ |
+| --- | --- | --- |
+| 1. ยืนยันโจทย์และช่องว่างงานวิจัย | ตารางเทียบงานวิจัยจากฉบับเต็ม แยกสิ่งที่ทราบ สมมติฐาน และคำถามที่ต้องหารืออาจารย์ | ยังไม่ถือว่า novelty หรือหัวข้อได้รับอนุมัติ |
+| 2. ทำบัญชีความพร้อมข้อมูล | แผนผังอาคาร–จุดคิดค่าไฟ–มิเตอร์ย่อย พร้อมเจ้าของข้อมูล สิทธิ์ใช้ บิล ข้อมูลตามช่วงเวลา และรายการที่ขาด | ใช้ข้อมูลจริงเฉพาะที่ได้รับอนุญาต เก็บข้อมูลดิบแยก ไม่ commit บิลจริงหรือข้อมูลผู้ใช้ EV โดยปริยาย |
+| 3. ทำฐานขั้นต่ำที่ตรวจได้ | สัญญา schema และ fixture ที่ระบุว่า synthetic สำหรับเทสต์สมดุลพลังงาน SOC และการคำนวณบิล จากนั้นเทียบบิลจริงเมื่อได้ข้อมูล | ถ้ายังเทียบบิลจริงไม่ได้ ให้รายงานว่าเป็นการทดสอบวิธี ไม่ใช่ผลประหยัด |
+| 4. พัฒนาการทดลอง | เทียบฐานระบบเดิมและ PV-only ก่อน แล้วเพิ่ม BESS/EV/flex ตามความพร้อม บันทึก baseline, ข้อจำกัด และชุดทดสอบให้ทำซ้ำได้ | ยังไม่เสนอแผนลงทุนจนผ่านเงื่อนไขข้อมูล บริการ สิทธิ์ และความไม่แน่นอนสำหรับกรณีนั้น |
 
-After an intentional presentation edit, update the `sha256` in `presentation-source/release-source.json`, documenting the new revision rather than pretending it is unchanged. Run the checks below and inspect the affected slides visually before committing.
+ถ้าได้รับงานให้รับช่วงแต่ยังไม่ได้ระบุสิ่งที่ต้องแก้ ให้ส่งสรุปสั้น ๆ ว่า repo มีอะไรแล้ว จุดตัดสินใจถัดไปคืออะไร และข้อมูลใดขาด ไม่สร้างตัวเลขหรือเปลี่ยนทิศวิจัยเอง
 
-The main research document and presentation are distinct revisions. Before revising scientific claims, reconcile both deliberately. Do not assume every later literature detail has already been merged into the Markdown proposal.
+## แก้เว็บและตรวจงาน
 
-## Run locally
+เว็บเป็น HTML/CSS/JavaScript แบบ static และใช้งาน offline ได้ ไม่ใช่แอป simulation แก้ `public/index.html` โดยตรงเฉพาะเมื่อโจทย์คือเว็บ เก็บฟอนต์ Kanit และใบอนุญาต ไม่ใช้ Python generator เก่าทับ HTML ที่ปรับแล้ว ถ้าแก้ HTML โดยตั้งใจจึงอัปเดต SHA-256 และประวัติใน `presentation-source/release-source.json` ตรวจสไลด์ที่กระทบจริง
 
-Open `public/index.html` directly, or serve only the publication directory:
-
-```
+```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory public
 ```
 
-Then open `http://127.0.0.1:4173/`.
+ทดสอบจาก checkout ด้วย Node.js 24 ขึ้นไป:
 
-Navigation: arrow/Page keys, Home/End, overview, notes, help and deep links such as `#slide-9`. Portrait mobile uses a scrollable slide layout. Browser fullscreen and actual printer/PDF output depend on the local browser and remain separate manual checks.
-
-## Checks
-
-Node.js 24 or newer is required for repository tests. The website itself needs no Node runtime and has no package dependencies.
-
-```
+```sh
 npm ci
 npm test
 npm run test:browser
 ```
 
-Playwright is pinned at 1.64.1. Browser checks can use an installed Google Chrome browser; otherwise install the matching Chromium with `npx playwright install chromium` first. The browser checker accepts `BASE_URL` for an already-running local or remote site and `PLAYWRIGHT_MODULE` for an existing installation. Consult the script for its current browser selection and default server behavior.
+Browser check ใช้ Playwright 1.64.1 กับ Chrome ที่ติดตั้งแล้ว หรือ Chromium รุ่นที่ตรงกัน รองรับ `BASE_URL` และ `PLAYWRIGHT_MODULE` ตาม [สคริปต์](scripts/check-browser.mjs) ตรวจ navigation/notes/dialogs/deep links และ desktop/mobile แยกจากการตรวจข้อสรุปทางวิจัย หน้าเว็บและชุดสัมมนาต้องตรวจแสดงผลคนละแบบ
 
-Static checks cover the 31 slides, essential controls, script/JSON syntax, executable network dependencies, private local references, font license, source-byte hash and publication allowlist. Browser checks cover navigation, dialogs, notes, deep links and desktop/mobile geometry. Neither test validates research results or third-party references.
+## ประวัติการเผยแพร่และขอบเขตสิทธิ์
 
-## Vercel deployment
+- Vercel project `kku-integrated-energy-research` ให้บริการจาก `public/` เท่านั้น ไม่วาง Markdown, บันทึกส่งต่อ หรือข้อมูลภาคสนามไว้ในโฟลเดอร์นี้ เว็บที่เคยเผยแพร่: [KKU research deck](https://kku-integrated-energy-research.vercel.app/)
+- การเผยแพร่แรกจาก commit `3ee136a68e62a64e0f4c9b3fe5b4ebb08468d013` ตรวจไว้ใน `RELEASE_CHECKS.md` รวมการตรวจ hash และสิทธิ์เข้าถึง **ณ เวลานั้น** ไม่ใช้บันทึกเดิมยืนยันการตั้งค่าปัจจุบัน Repo แบบ private และ `noindex` ไม่ได้แปลว่าเว็บจำกัดสิทธิ์ ให้ตรวจแยกเมื่อมีงานแชร์หรือเผยแพร่ และอย่าเปลี่ยนสิทธิ์โดยพลการ
+- อัปเดต handoff บน branch สัมมนานี้ ไม่แก้เว็บ ไม่แก้สไลด์ และไม่สั่ง deploy หรือ promote production การเผยแพร่ครั้งถัดไปต้องยืนยันขอบเขตสิทธิ์และ commit ที่จะเผยแพร่กับเจ้าของงาน
 
-Team: AJBK's projects (`team_xEQBoNPkiwRVDw8SmXRL89kI`)
+## ข้อความสำหรับให้ AI ตัวอื่นรับช่วง
 
-Project: `kku-integrated-energy-research` (`prj_PxYssL3tXLgXdmflo7OwUesAQBdK`)
-
-Framework: Other/static. Output directory: `public`. Build and install commands: empty. Node setting: 24.x. No environment variables or secrets are required. Only the deck and robots.txt are published; research documents, source hashes, local paths and this handoff are not site routes.
-
-The project currently uses Vercel Authentication for `all`. The initial default `all_except_custom_domains` allowed the production alias to respond without a login; protection was tightened to cover production as well. An anonymous request then redirected to Vercel SSO. Preserve this access protection unless the owner explicitly changes the intended audience. A private GitHub repository does not itself protect a website. `noindex`/robots.txt request search-engine exclusion, not access control.
-
-For a future release, run checks, commit, push this branch, then deploy the exact reviewed commit to this existing Vercel project. Verify the resulting deployment status and URL. Do not assume pushing a non-default branch promotes production automatically. Check the Git connection and production branch settings first; an explicit Git-based deployment is acceptable.
-
-Do not create a replacement Site or overwrite the old thesis/portfolio deployments. No custom domain, paid service, analytics or additional persistent credential is needed for this release.
-
-## Initial published release
-
-Production URL: https://kku-integrated-energy-research.vercel.app/
-
-Initial published commit: `3ee136a68e62a64e0f4c9b3fe5b4ebb08468d013`
-
-Initial Vercel deployment: `dpl_2K6Jb1HUpibE2WL75Uwc9ihbCdsb`, READY, Git source, production.
-
-The first push on `research/integrated-energy-19-buildings` became the repository default branch and triggered a successful production Git deployment. GitHub reported the Vercel status as success for that exact commit. Keep checking the current production-branch setting before future publication; the earlier generic caution about non-default branches still applies.
-
-An authenticated HTTP fetch returned 200 with all 31 slides. The served HTML SHA-256 matched the canonical file exactly. `X-Robots-Tag: noindex, nofollow`, `X-Content-Type-Options: nosniff` and the referrer-policy header were present. After the initial fetch, anonymous production access was checked and protection was tightened to `all`; the production alias and immutable deployment now require Vercel Authentication. Use the regular production URL while signed in to the authorized Vercel account; no public bearer link is provided.
-
-Local browser QA is complete. Full remote-browser interaction and authenticated negative-route checks were not completed; the verified deployed-byte match and authenticated main-page response should not be described as those tests.
-
-## Verification limits and next work
-
-- No numerical model, optimization or field validation was run for this release.
-- Study permissions, metering topology, EV demand, export compensation and scientific novelty still require evidence and advisor review.
-- The three original documents recorded in `source_manifest.json` must retain their hashes.
-- The initial `VERIFICATION.md` describes the proposal-only checkpoint. Later publication checks are separate; do not read its historical no-remote/no-deploy state as current release configuration.
-- Before sharing outside the intended audience, confirm the access policy and that research claims remain proposal-level.
+> ทำงานใน private repo `ajbk/kku-integrated-energy-research` โดยเริ่มจาก branch `seminar/en049992-2-2026-11-21` อ่าน `AGENTS.md` และ `HANDOFF.md` ที่ราก repo ก่อน จากนั้นอ่านข้อเสนอใน `docs/01_proposal_TH.md` แผนทดลองใน `docs/03_experiments_and_metrics.md` และเงื่อนไขข้อมูลใน `docs/04_data_and_claim_gates.md` สรุปสถานะจริง จุดที่ยังต้องยืนยัน และแผนสำหรับงานที่ได้รับก่อนแก้ รักษาขอบเขต 19 อาคารและอย่าสมมติจำนวนมิเตอร์/ข้อมูล/ผลทดลอง หากเป็นงานสไลด์สัมมนา ให้ดู `deliverables/EN049992-2/HANDOFF.md` ไม่แก้ต้นฉบับเว็บเพื่ออัปเดต PowerPoint และอย่า merge, deploy หรือแชร์ข้อมูลออกนอก repo ถ้าไม่ได้รับมอบหมาย

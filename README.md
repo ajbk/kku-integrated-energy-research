@@ -4,6 +4,8 @@
 
 ## เริ่มอ่าน
 
+ถ้ามารับช่วงโครงการ ให้เริ่มที่ [Project handoff](HANDOFF.md) ซึ่งระบุ branch แหล่งอ้างอิง งานถัดไป และข้อความสำหรับให้ AI ตัวอื่นเริ่มงาน
+
 1. [ข้อเสนอหลักภาษาไทยพร้อมชื่อและ Abstract ภาษาอังกฤษ](docs/01_proposal_TH.md)
 2. [เปรียบเทียบกับแนวเดิม](docs/02_scope_comparison.md)
 3. [แผนทดลองและตัวชี้วัด](docs/03_experiments_and_metrics.md)
@@ -26,7 +28,7 @@
 - Branch: `research/integrated-energy-19-buildings`
 - Base branch: `main`
 - GitHub repository แบบ private: https://github.com/ajbk/kku-integrated-energy-research
-- Vercel project: kku-integrated-energy-research โดยเปิด Vercel Authentication ครอบคลุมทุก deployment รวม production
+- Vercel project: kku-integrated-energy-research (สถานะการจำกัดสิทธิ์ต้องตรวจแยกก่อนแชร์หรือเผยแพร่)
 
 ใช้ `git worktree list` จาก base repository เพื่อตรวจ ใช้งานต่อใน worktree เท่านั้น main เก็บเพียงฐาน/manifest ไม่มีร่างแนวใหม่ปนอยู่ใน main แหล่งงานเดิมและ hashes อยู่ใน [source_manifest.json](source_manifest.json)
 
@@ -38,4 +40,4 @@
 
 ตรวจด้วย `npm test` และ `npm run test:browser` ตามคำแนะนำใน handoff ไม่มี backend หรือการติดตั้งระบบพลังงานจริง
 
-เว็บ production ที่ตรวจแล้ว: https://kku-integrated-energy-research.vercel.app/ โดยใช้บัญชี Vercel ที่มีสิทธิ์เข้าดู หน้าเว็บยังเปิด Authentication อยู่
+เว็บที่เคยเผยแพร่: https://kku-integrated-energy-research.vercel.app/ ดูประวัติการตรวจสิทธิ์ที่ [RELEASE_CHECKS.md](RELEASE_CHECKS.md)
