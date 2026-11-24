@@ -1,10 +1,42 @@
 # KKU Integrated Energy Research | Project handoff
 
-อัปเดต 21 พฤศจิกายน 2569 (2026) · เอกสารสำหรับคนหรือ AI ที่มารับช่วงงานทั้งโปรเจกต์ ไม่ใช่ handoff เฉพาะสไลด์
+Updated 24 November 2026. Start here for the revised proposal. The historical section below is retained for reference, not as the current experiment protocol.
 
-## Revised English working proposal on this branch
+## Current proposal
 
-[Policy-Aware Sizing of Campus Photovoltaics and Battery Storage with Smart EV Charging](./docs/06_policy_aware_sizing_proposal_revised_EN.md) is the post-review working proposal for advisor discussion. It defines the revised question, comparators and validation protocol: choose capacities for an implementable controller, then test whether perfect foresight changes the decision. Begin there for the revised scope; the original proposal, research design below and EN049992-2 slides are retained for context. The new scope is not approved and does not claim KKU results, access or permission to operate chargers. This documentation branch does not change the release branch or the published deck.
+Read [When Does Perfect Foresight Mis-Size Campus Energy Assets?](docs/06_policy_aware_sizing_proposal_revised_EN.md) as the canonical working proposal for adviser discussion. The question is whether PV and BESS capacities chosen with perfect foresight remain appropriate when the system can use only information available at decision time, and whether billed-peak memory and declared EV charging commitments help predict when designs switch rank. Do not claim confirmed novelty, approval, feasibility, or measured KKU results. Start the prior-art review with the full texts in §1 of the proposal.
+
+The 19 Engineering buildings define screening scope, not 19 independent meters. Target 2–4 verified billing points for detailed evaluation. Keep fixed EV infrastructure and unidirectional managed charging (V1G) in the central case; preserve no-new-investment, PV-only and zero-BESS alternatives. Report PV kWp, BESS power in kW and energy in kWh separately. Do not assume export or cross-account netting.
+
+## Fair comparison
+
+1. The retrospective oracle has realized future data and gives a lower cost bound **at fixed design, physics, service and chronology**. It is not a deployable controller or evidence of realizable savings.
+2. The causal controller sees only information known before each decision: observed SOC and billing peak, active connections and timestamped EV requests. Actual departure, delivered energy and the final billed peak are outcomes, not inputs.
+3. Select capacities on development data and lock both designs before chronological holdout. Compare (a) oracle versus causal costs at the same design, (b) the two selected designs operated by the **same causal controller**, and (c) capacity choices including zero BESS. The held-out sizing difference can change sign. Use only certified oracle lower bounds for screening, not unconverged feasible incumbents. Coordination, lower-bound pruning and the fact that oracle costs are optimistic do not establish novelty; test the proposed crossover mechanisms on unseen data.
+
+## Evidence and decision gates
+
+- **Meter and billing:** Obtain a custodian-verified building/account/submeter map, applicable terms, actual read-to-read invoice and native interval export. Reconcile energy, eligible physical peak and billed demand separately. One reconciled bill is a first test, not multi-meter validation. Do not fill peak-window gaps silently, infer a tariff, or promise export credit or settlements without evidence.
+- **EV:** Ask an authorized operator for de-identified records distinguishing plug-in/out from charging start/stop, power and energy, charger-to-meter mapping, and what requested energy and departure were available to the controller and when. Do not infer commitments from realized outcomes. Obtain separate privacy/ethics, publication and control approvals; read-only access is not dispatch permission. Start with shadow mode; live opt-in operation requires authorized supervision and fallback. Keep raw bills and identifiable sessions outside the repository.
+- **Preferred B+C:** New method and prospective field evidence if billing, control, operations and publication access are verified. **Fallback B+D:** If control is unavailable, proceed only with adviser agreement and independently measured site evidence that supports the same decision-time question under declared tariff scenarios. One KKU site plus one qualified outside site can test transferability, not KKU multi-meter performance. If measured cases are inadequate, pause. Synthetic-only evidence is not a completion route; public component data or synthetic fixtures can test mechanics without being presented as integrated KKU validation.
+- **Sources:** [KKU administration minutes on internal metering](https://council.kku.ac.th/wp-content/uploads/2024/06/KKU-Admin-Meeting-Report_No.-8-67_20-May-2024.pdf#page=14) and [2023 V2H prototype](https://www.khonkaen.go.th/khonkaen6/detail/dtActivity.php?id=4203&ym=) are dated context, not current utility or control evidence. [ACN-Data](https://ev.caltech.edu/dataset), [CU-BEMS](https://www.nature.com/articles/s41597-020-00582-3), and [Building Data Genome 2](https://doi.org/10.1038/s41597-020-00712-x) are separate benchmarks; splicing them does not create a measured integrated site.
+
+## Branches and next actions
+
+- [Revised proposal and handoff](https://github.com/ajbk/kku-integrated-energy-research/tree/research/policy-aware-sizing-revision): continue from this branch, following [AGENTS.md](AGENTS.md).
+- [EN049992-2 seminar](https://github.com/ajbk/kku-integrated-energy-research/tree/seminar/en049992-2-2026-11-21): the separate Thai/English three-slide decks predate the revision and **are not yet aligned**. Preserve the originals. If asked to revise, first map the changed question, comparators, scope and evidence status before editing a new copy.
+- [Release](https://github.com/ajbk/kku-integrated-energy-research/tree/research/integrated-energy-19-buildings) and [main](https://github.com/ajbk/kku-integrated-energy-research/tree/main): retain separately. The existing website is not the revised proposal. Do not merge, publish, open a PR, or deploy under this handoff.
+- Next: (1) review nearest prior art and prepare adviser decisions; (2) establish one bill/export pair and EV schema; (3) at the 30-day access review choose B+C, B+D or pause; (4) freeze the capacity catalog, replay policy and held-out-test rules when evidence permits; (5) handle any seminar alignment as separate work.
+
+## Paste-ready starter for another AI
+
+> Continue the private ajbk/kku-integrated-energy-research project on research/policy-aware-sizing-revision. Read AGENTS.md, this handoff's current sections and docs/06_policy_aware_sizing_proposal_revised_EN.md. Treat the last file as canonical. First summarize the decision-time question, the oracle versus causal comparisons, and the B+C/B+D evidence gaps. Then propose a prior-art checklist and the facts needed for one reconciled bill and one usable EV sample. Label verified, assumed and unknown separately. Do not claim novelty, approval, KKU results, tariff or export rights without evidence. Keep seminar and release work separate. Do not change artifacts, open a PR, deploy, contact anyone, transfer private data or operate devices without specific instructions. For thesis-bound writing, work from the student's own substantive text and follow KKU's AI-use disclosure rules.
+
+---
+
+## Historical context (not the current protocol)
+
+The remainder records the legacy research direction and seminar handoff. Its terminology and branch pointers do not supersede the sections above.
 
 ## เริ่มตรงนี้
 

@@ -4,6 +4,8 @@
 
 ## เริ่มอ่าน
 
+**Current working proposal on this branch:** [Revised PhD Proposal (EN)](docs/06_policy_aware_sizing_proposal_revised_EN.md) · [Research handoff](HANDOFF.md#current-proposal). The earlier seminar decks and website are not yet aligned with this revision.
+
 ถ้ามารับช่วงโครงการ ให้เริ่มที่ [Project handoff](HANDOFF.md) ซึ่งระบุ branch แหล่งอ้างอิง งานถัดไป และข้อความสำหรับให้ AI ตัวอื่นเริ่มงาน
 
 1. [ข้อเสนอหลักภาษาไทยพร้อมชื่อและ Abstract ภาษาอังกฤษ](docs/01_proposal_TH.md)
